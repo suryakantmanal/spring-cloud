@@ -1,0 +1,10 @@
+server: 
+   port: 8085
+spring: 
+    application:
+        name: zuul-server
+zuul: 
+  routes:
+     movie-catelog:  
+               path: /movie-catalog/**
+               service-id: movie-catalog-service
