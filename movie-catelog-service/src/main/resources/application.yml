@@ -1,0 +1,6 @@
+catelogSvc: 
+ ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8083,localhost:9083
+  

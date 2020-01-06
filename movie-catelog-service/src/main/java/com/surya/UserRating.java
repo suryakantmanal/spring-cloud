@@ -10,6 +10,11 @@ public class UserRating {
 		return userId;
 	}
 
+	@Override
+	public String toString() {
+		return "UserRating [userId=" + userId + ", ratingList=" + ratingList + "]";
+	}
+
 	public UserRating(String userId, List<Rating> ratingList) {
 		super();
 		this.userId = userId;

@@ -11,6 +11,11 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class UserRatingInfo {
 	
+	@Override
+	public String toString() {
+		return "UserRatingInfo [restTemplate=" + restTemplate + "]";
+	}
+
 	@Autowired
 	private RestTemplate restTemplate;
 	
@@ -24,6 +29,7 @@ public class UserRatingInfo {
 		UserRating userRating = new UserRating();
 		userRating.setUserId(userId);
 		userRating.setRatingList(Arrays.asList(new Rating("0", 0)));
+		System.out.println("in fallback user rating");
 		return userRating;
 		
 	}
